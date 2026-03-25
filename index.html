@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./image/favicon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +14,62 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <header class="header container">
+      <h1 class="header__logo">&lt;/html&gt;</h1>
+      <h2 class="header__title">закрывающий тег</h2>
+    </header>
+    <main>
+      <ul class="content">
+        <li class="card__list container">
+          <h3 class="card__title">
+            Фритрек и нулевой спринт: Подготовка к работе
+          </h3>
+          <div class="card__conteiner">
+            <img
+              class="card__image"
+              src="./images/image (3).png"
+              alt="Воспоминания о начале обучения"
+              loading="lazy"
+            />
+            <span class="card__logo">&lt;/html&gt;</span>
+          </div>
+          <div class="card__text">
+            <p>
+              Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.
+            </p>
+            <p>Место для ваших воспоминаний о начале обучения.</p>
+          </div>
+          <div class="button__conteiner">
+            <button class="card__icon-button" type="button">
+              <svg
+                class="like-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 27 24"
+                width="27"
+                height="24"
+              >
+                <path
+                  fill="#000"
+                  d="M6 0H3v3h3zM9 0H6v3h3zM3 3H0v3h3zM3 6H0v3h3zM3 9H0v3h3zM12 0H9v3h3zM6 12H3v3h3zM9 15H6v3h3zM12 18H9v3h3zM21 0h3v3h-3zM18 0h3v3h-3zM24 3h3v3h-3zM24 6h3v3h-3zM24 9h3v3h-3zM15 0h3v3h-3zM21 12h3v3h-3zM18 15h3v3h-3zM15 18h3v3h-3zM15 3h-3v3h3zM15 21h-3v3h3z"
+                />
+              </svg>
+            </button>
+            <button class="card__like-button" type="button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
