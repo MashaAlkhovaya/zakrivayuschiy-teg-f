@@ -12,4 +12,6 @@
     linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   --bg-color: rgba(255, 255, 255, 1);
   --container-width: clamp(375px, 69vw, 700px);
+
+  --stroke-color: #fff;
 }
