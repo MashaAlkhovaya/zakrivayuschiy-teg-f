@@ -30,7 +30,7 @@
 
 .container {
   margin: 0 auto;
-  border: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid var(--accent-color);
   max-inline-size: var(--container-width);
 }
 
@@ -81,8 +81,8 @@
 
 .card__image {
   display: block;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
   object-fit: cover;
   inline-size: 100%;
   aspect-ratio: 1/1;
@@ -113,14 +113,13 @@
 }
 
 .image__success {
-  filter: grayscale(0.5) invert(10%);
-
+  filter: contrast(60%) hue-rotate(320deg);
 }
 
 .card__logo {
   position: absolute;
   opacity: 0.5;
-  color: #000;
+  color: var(--accent-color);
   font-family: var(--font-accent);
   font-weight: var(--text-weight-normal);
   font-size: 14px;
@@ -163,7 +162,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 7px;
   padding-inline-end: 25px;
   padding-block-end: 25px;
   background-color: var(--bg-color);
@@ -171,19 +170,42 @@
 
 .card__icon-button {
   border: none;
+  outline: none;
   background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
+  position: relative;
+  border: 2px solid var(--accent-color);
+  overflow: hidden;
   background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
   inline-size: 130px;
   block-size: 38px;
 }
 
 .button__text {
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
   font-family: var(--font-accent);
   font-weight: var(--text-weight-normal);
   font-size: 14px;
+  mix-blend-mode: difference;
 }
 
 .button {
@@ -193,10 +215,21 @@
 }
 
 .button__save {
-  border: 2px solid #000;
+  position: relative;
+  border: 2px solid var(--accent-color);
   padding-inline: 20px;
   padding-block: 15px;
+  overflow: hidden;
+  background: transparent;
   background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.save__floppy {
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
+  mix-blend-mode: difference;
 }
 
 .dialog {
@@ -213,7 +246,7 @@
 
 .dialog::backdrop {
   opacity: 0.6;
-  background-color: rgba(0, 0, 0);
+  background-color: var(--accent-color);
 }
 
 .dialog__continue {
@@ -230,14 +263,49 @@
 }
 
 .button__dialog {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
+  border: 2px solid var(--accent-color);
+  overflow: hidden;
   text-transform: uppercase;
   background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
   block-size: 38px;
   inline-size: 100%;
+}
+
+.card__like-button::before,
+.button__save::before,
+.button__dialog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: var(--accent-color);
+  transition: 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.card__like-button:hover::before,
+.button__save:hover:before,
+.button__dialog:hover:before {
+  transform: scaleX(1);
+}
+
+.card__like-button:focus-visible,
+.button__save:focus-visible,
+.button__dialog:focus-visible {
+  outline: none;
+}
+
+.card__like-button:focus,
+.button__save:focus,
+.button__dialog:focus {
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  outline: none;
 }
 
 @media (width <= 375px) {

@@ -14,4 +14,11 @@
   --container-width: clamp(375px, 69vw, 700px);
 
   --stroke-color: #fff;
+  --accent-color: #000;
+  --text-color: #fff;
+
+  --contour: #000;
+  --main-color: #ff0000;
+  --sparks-color: #ff0000;
+  --core-color: #fff;
 }
