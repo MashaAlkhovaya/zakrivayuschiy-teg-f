@@ -11,7 +11,7 @@
     repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
     linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   --bg-color: rgba(255, 255, 255, 1);
-  --container-width: clamp(375px, 69vw, 700px);
+  --container-width: clamp(375px, 50vw, 700px);
 
   --stroke-color: #fff;
   --accent-color: #000;
