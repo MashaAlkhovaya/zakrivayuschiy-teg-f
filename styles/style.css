@@ -183,10 +183,6 @@
   border: 2px solid var(--accent-color);
 }
 
-.sparks {
-  opacity: 0;
-}
-
 .card__like-button {
   position: relative;
   border: 2px solid var(--accent-color);
