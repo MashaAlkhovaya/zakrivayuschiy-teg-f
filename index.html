@@ -502,26 +502,27 @@
           </div>
         </li>
       </ul>
-    </main>
-    <footer class="button__footer">
-      <button
-        class="button button__save"
-        type="button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
-      >
-        <svg
-          class="save__floppy"
-          fill="currentColor"
-          viewBox="0 0 39 39"
-          width="21"
-          height="21"
+      <div class="button__footer">
+        <button
+          class="button button__save"
+          type="button"
+          onclick="window['dialog-id'].showModal()"
+          aria-controls="dialog-id"
         >
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
+          <svg
+            class="save__floppy"
+            fill="currentColor"
+            viewBox="0 0 39 39"
+            width="21"
+            height="21"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </div>
+    </main>
+
     <dialog id="dialog-id" class="dialog" aria-label="Кнопка сохранения">
       <div class="dialog__continue">
         <svg width="39" height="39">
